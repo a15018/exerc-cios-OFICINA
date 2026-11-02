@@ -1,19 +1,15 @@
 programa {
+  inclua biblioteca Texto
+  cadeia texto
+  inteiro tamanho
+  funcao inicio() {
+    escreva("digite um texto: ")
+    leia(texto)
 
-    inteiro num, soma
-    
-    funcao inicio() {
-      soma = 0
+    tamanho = Texto.numero_caracteres(texto)
 
-      para (inteiro i =0; i<8; i++){
-        escreva ("qual os numeros que voce quer somar? ")
-        leia(num)
-        soma = soma + num
-
-       
-      }
-      escreva (soma)
-
-    
+    para(inteiro i = 0; i < tamanho; i++){
+      escreva(Texto.obter_caracter(texto,i), " ")
+    }
   }
 }
